@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Rowdies:wght@300;400;700&display=swap');
+@import url('icons.css');
+:root{
+	--color_principal: #181818;
+	--color_secundario: #0032a2;
+	--color_negro: #000;
+	--color_blanco: #fff;
+	--fuente1:'Caveat';
+	--fuente2:'Rowdies';
+	--font_size: 16px;
+}
+*{
+	color: var(--color_secundario);
+	font-family: var(--fuente2);
+}
+
+body{
+	margin: 0;
+	background-color: var(--color_principal);
+	background-image: url('../images/hero.jpg');
+	background-size: cover; 
+	background-repeat: no-repeat;
+}
+
+.grid-container{
+	display: grid;
+	grid-template: 25vh 65vh 10vh/20% 80%;
+	grid-template-areas: "hero hero" "menu description" "footer footer";
+}
+
+.menu{
+	/* border: 1px solid red; */
+	grid-area: menu;
+}
+.hero{
+	/* border: 1px solid green; */
+	grid-area: hero;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.menu-container{
+	height: 100%;
+	background-image: url('../images/pergamino2.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.menu-container a{
+	font-family: var(--fuente1);
+	font-size: 6vh;
+	font-weight: 700;
+	text-decoration: none;
+	color: var(--color_negro);
+	margin: 0.5em auto;
+	border-bottom: 3px solid var(--color_negro);
+}
+
+.hero img{
+	height: 100%;
+	background-color: rgba(255,255,255,40%);
+	border-radius: 20px;
+}
+
+.description-content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-image: url('../images/pergamino.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+	/* border: 1px solid purple; */
+	grid-area: description;
+}
+
+.previous {
+	width: 15%;
+}
+
+.description-content a {
+	font-size: 4em;
+	color: var(--color_negro);
+	text-decoration: none;
+}
+
+.description{
+	width: 70%;
+	text-align: left;
+}
+
+.description p{
+	font-size: 2em;
+	color: var(--color_negro);
+	font-family: var(--fuente1);
+	font-weight: 700;
+	line-height: 1em;
+	padding-left: 20%;
+}
+
+.next {
+	width: 15%;
+}
+
+.footer{
+	/* border: 1px solid blue; */
+	grid-area: footer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(255,255,255,40%);
+	padding: 0 5%;
+	border-radius: 20px;
+}
+
+.autor{
+	color: var(--color_negro);
+}
+
+.redes a{
+	color: var(--color_negro);
+	font-size: 1.5em;
+	text-decoration: none;
+	margin: 0 10px;
+}
