@@ -32,13 +32,6 @@ body{
 	/* border: 1px solid red; */
 	grid-area: menu;
 }
-.hero{
-	/* border: 1px solid green; */
-	grid-area: hero;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
 
 .menu-container{
 	height: 100%;
@@ -60,6 +53,13 @@ body{
 	border-bottom: 3px solid var(--color_negro);
 }
 
+.hero{
+	/* border: 1px solid green; */
+	grid-area: hero;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 .hero img{
 	height: 100%;
 	background-color: rgba(255,255,255,40%);
@@ -95,6 +95,7 @@ body{
 }
 
 .description p{
+	text-transform: capitalize;
 	font-size: 2em;
 	color: var(--color_negro);
 	font-family: var(--fuente1);
@@ -127,4 +128,78 @@ body{
 	font-size: 1.5em;
 	text-decoration: none;
 	margin: 0 10px;
+}
+
+@media screen and (max-width: 768px){
+	body{
+		background-repeat: repeat-y;
+		background-size: 100%;
+	}
+	.description-content a{
+		font-size: 2.5em;
+	}
+	
+	.description p {
+		font-size: 1.5em;
+		padding-left: 10%;
+	}
+	.menu-container{
+		background-size: 100% 70%;
+	}
+	.menu-container a{
+		font-size: 5vh;
+	}
+}
+
+@media screen and (max-width: 480px){
+	body{
+		background-repeat: repeat-y;
+		background-size: 100%;
+	}
+	.grid-container{
+		grid-template: 25vh 65vh 10vh/100%;
+		grid-template-areas: "hero" "description" "footer";
+	}
+	.menu{
+		display: none;
+	}
+	.hero{
+		grid-area: hero;
+	}
+
+	.hero img{
+		height: 90%;
+	}
+
+	.description-content{
+		grid-area: description;
+	}
+
+	.description-content a{
+		font-size: 2em;
+	}
+	
+	.description p {
+		font-size: 1.3em;
+		padding-left: 10%;
+	}
+	
+	.footer{
+		/* border: 1px solid blue; */
+		grid-area: footer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: rgba(255,255,255,40%);
+		padding: 0 5%;
+		border-radius: 20px;
+	}
+	
+	.autor{
+		font-size: 1em;
+	}
+	
+	.redes a{
+		font-size: 1em;
+	}
 }
